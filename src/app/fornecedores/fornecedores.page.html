@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fornecedores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let f of fornecedores">
+      <!-- Link para edição-->
+      <ion-item (click)="editFornecedor(f.id)">
+        <h2>{{f.nome}}</h2>
+      </ion-item>
+
+      <!-- Botao para apagar-->
+      <ion-item-options side="end">
+        <ion-button color="danger" (click)="removeFornecedor(f.id)">
+          <ion-icon name="trash"></ion-icon>
+          Excluir
+        </ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- Botao Novo-->
+  <ion-fab>
+    <ion-fab-button color="light" (click)="addFornecedor()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>EditFornecedor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Id</ion-label>
+      <ion-input type="text" name="id" [(ngModel)]="fornecedor.id"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="fornecedor.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Avaliação do Fornecedor</ion-label>
+      <ion-input type="text" name="avaliacao" [(ngModel)]="fornecedor.avaliacao"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button block (click)="save()">Salvar</ion-button>
+ </ion-content>
